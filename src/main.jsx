@@ -14,6 +14,7 @@ import 'animate.css';
 import ErrorPage from './Pages/ErrorPage';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
 import UpdateProfile from './Pages/updateProfile/UpdateProfile';
+import PrivetRoute from './Pages/PrivetRoute/PrivetRoute';
 
 
 const router = createBrowserRouter([
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
     children : [
       {
         path : '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader : ()=>fetch('../public/category.json')
       },
       {
         path: '/login',
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/contact',
-        element: <ContactUs></ContactUs>
+        element: <PrivetRoute><ContactUs></ContactUs></PrivetRoute>
       },
       {
       path: '/profile',

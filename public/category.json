@@ -1,104 +1,74 @@
 [
   {
     "id": 1,
-    "estate_title": "Modern Apartment with City View",
+    "estate_title": "Single-family Home with Spacious Yard",
     "segment_name": "Residential",
-    "description": "Experience urban living at its finest in this stylish apartment boasting panoramic views of the city skyline. With contemporary design and upscale amenities, this property offers a luxurious lifestyle.",
-    "price": "$800,000",
+    "description": "Enjoy the comforts of suburban living in this single-family home featuring a spacious yard, perfect for outdoor activities and entertaining. With multiple bedrooms and modern amenities, this property is ideal for families.",
+    "price": "$600,000",
     "status": "sale",
-    "area": "1500 sq ft",
-    "location": "Manhattan, New York",
-    "facilities": [
-      "Open-concept living area",
-      "Fitness center",
-      "24/7 security",
-      "Private balcony"
-    ],
-    "image": "modern_apartment.jpg"
+    "area": "2500 sq ft",
+    "location": "Los Angeles, California",
+    "facilities": ["Backyard garden", "Attached garage"],
+    "image": "https://i.ibb.co/qgnh61N/12661.jpg"
   },
   {
     "id": 2,
-    "estate_title": "Charming Townhouse in Historic District",
+    "estate_title": "Townhouse in Urban Community",
     "segment_name": "Residential",
-    "description": "Step back in time with this charming townhouse nestled in a historic neighborhood. Featuring period details and modern comforts, this property offers a unique blend of old-world charm and contemporary living.",
-    "price": "$600,000",
+    "description": "Experience urban living at its finest in this modern townhouse located in a vibrant community. With sleek design and convenient amenities, this property offers the perfect blend of style and functionality.",
+    "price": "$450,000",
     "status": "sale",
     "area": "1800 sq ft",
-    "location": "Charleston, South Carolina",
-    "facilities": [
-      "Original hardwood floors",
-      "Courtyard garden",
-      "Chef's kitchen",
-      "Fireplace"
-    ],
-    "image": "townhouse_charleston.jpg"
+    "location": "Brooklyn, New York",
+    "facilities": ["Rooftop terrace", "Community pool"],
+    "image": "https://i.ibb.co/mGcQqZB/2149085486.jpg"
   },
   {
     "id": 3,
-    "estate_title": "Family-Friendly Suburban Home",
+    "estate_title": "Luxury Apartment in High-rise Tower",
     "segment_name": "Residential",
-    "description": "Make lasting memories in this spacious suburban home perfect for families. Enjoy ample living space, a large backyard, and proximity to schools and parks.",
-    "price": "$500,000",
+    "description": "Indulge in luxury living in this high-rise apartment offering breathtaking views and upscale amenities. With spacious interiors and premium finishes, this property provides an elevated urban lifestyle.",
+    "price": "$1,200,000",
     "status": "sale",
-    "area": "2500 sq ft",
-    "location": "Austin, Texas",
-    "facilities": [
-      "Multiple bedrooms",
-      "Backyard patio",
-      "Playroom",
-      "Attached garage"
-    ],
-    "image": "suburban_home_austin.jpg"
+    "area": "2000 sq ft",
+    "location": "Chicago, Illinois",
+    "facilities": ["Sky lounge", "Fitness center"],
+    "image": "luxury_apartment.jpg"
   },
   {
     "id": 4,
-    "estate_title": "Luxurious Penthouse with Skyline Views",
+    "estate_title": "Student Housing Near Campus",
     "segment_name": "Residential",
-    "description": "Live lavishly in this stunning penthouse offering unparalleled views of the city skyline. With high-end finishes and exclusive amenities, this property epitomizes luxury living.",
-    "price": "$1,500,000",
-    "status": "sale",
-    "area": "3000 sq ft",
-    "location": "Los Angeles, California",
-    "facilities": [
-      "Private rooftop terrace",
-      "Spa-like bathrooms",
-      "Concierge service",
-      "State-of-the-art kitchen"
-    ],
-    "image": "luxury_penthouse.jpg"
+    "description": "Find your home away from home in this conveniently located student housing complex. With furnished units and on-site amenities, this property offers a comfortable and convenient living experience for students.",
+    "price": "$800/month",
+    "status": "rent",
+    "area": "500 sq ft (per room)",
+    "location": "Austin, Texas",
+    "facilities": ["Fully furnished units", "Study lounges"],
+    "image": "student_housing.jpg"
   },
   {
     "id": 5,
-    "estate_title": "Cozy Cottage by the Lake",
+    "estate_title": "Senior Living Community with Care Services",
     "segment_name": "Residential",
-    "description": "Escape the hustle and bustle in this charming cottage nestled beside a tranquil lake. Perfect for nature lovers, this retreat offers peace and serenity.",
-    "price": "$350,000",
-    "status": "sale",
-    "area": "1200 sq ft",
-    "location": "Lake Tahoe, Nevada",
-    "facilities": [
-      "Lakefront deck",
-      "Stone fireplace",
-      "Boat dock",
-      "Scenic views"
-    ],
-    "image": "lake_cottage.jpg"
+    "description": "Experience retirement living at its finest in this senior living community offering a range of care services and amenities. With spacious accommodations and social activities, residents can enjoy a fulfilling lifestyle.",
+    "price": "$3,500/month",
+    "status": "rent",
+    "area": "700 sq ft (per unit)",
+    "location": "Scottsdale, Arizona",
+    "facilities": ["Assisted living services", "Restaurant-style dining"],
+    "image": ""
   },
   {
     "id": 6,
-    "estate_title": "Contemporary Loft in Artsy Neighborhood",
-    "segment_name": "Residential",
-    "description": "Immerse yourself in creativity and culture in this contemporary loft located in a vibrant arts district. With its industrial-chic design and eclectic vibe, this property is perfect for urban dwellers with an artistic flair.",
-    "price": "$900,000",
-    "status": "sale",
-    "area": "2000 sq ft",
-    "location": "Portland, Oregon",
-    "facilities": [
-      "Exposed brick walls",
-      "Art studio space",
-      "Community rooftop garden",
-      "Walk-in closet"
-    ],
-    "image": "artsy_loft.jpg"
+    "estate_title": "Vacation Rental with Beachfront Access",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to paradise in this stunning vacation rental offering direct beachfront access and panoramic ocean views. With luxurious accommodations and resort-style amenities, this property is the perfect getaway.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "Maui, Hawaii",
+    "facilities": ["Infinity pool", "BBQ area"],
+    "image": "https://i.ibb.co/qWxHx81/2073.jpg"
   }
 ]

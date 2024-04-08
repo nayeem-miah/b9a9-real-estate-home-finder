@@ -85,8 +85,10 @@ const Navbar = () => {
           </NavLink>
         )}
         {user ? (
-          <NavLink onClick={handleLogout}>
-            <button className="btn ml-4">Sign Out</button>{" "}
+          <NavLink>
+            <button onClick={handleLogout} className="btn ml-4">
+              Sign Out
+            </button>{" "}
           </NavLink>
         ) : (
           ""
