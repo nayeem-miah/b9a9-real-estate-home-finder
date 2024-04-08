@@ -13,6 +13,7 @@ import ContactUs from './Pages/Contact Us/ContactUs';
 import 'animate.css';
 import ErrorPage from './Pages/ErrorPage';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
+import UpdateProfile from './Pages/updateProfile/UpdateProfile';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <ContactUs></ContactUs>
+      },
+      {
+      path: '/profile',
+      element: <UpdateProfile></UpdateProfile>
       }
     ]
   },

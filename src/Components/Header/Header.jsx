@@ -5,9 +5,7 @@ const Header = () => {
     <div className="carousel  my-8">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={image}  />
-        {/* <h1 className="mb-5 text-6xl font-bold animate__animated animate__bounce text-blue-800">
-          WellCome{" "}
-        </h1> */}
+       
 
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide4" className="btn btn-circle">

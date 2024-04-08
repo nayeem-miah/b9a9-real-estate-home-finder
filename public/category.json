@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Modern Apartment with City View",
+    "segment_name": "Residential",
+    "description": "Experience urban living at its finest in this stylish apartment boasting panoramic views of the city skyline. With contemporary design and upscale amenities, this property offers a luxurious lifestyle.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": "Manhattan, New York",
+    "facilities": [
+      "Open-concept living area",
+      "Fitness center",
+      "24/7 security",
+      "Private balcony"
+    ],
+    "image": "modern_apartment.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Charming Townhouse in Historic District",
+    "segment_name": "Residential",
+    "description": "Step back in time with this charming townhouse nestled in a historic neighborhood. Featuring period details and modern comforts, this property offers a unique blend of old-world charm and contemporary living.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "Charleston, South Carolina",
+    "facilities": [
+      "Original hardwood floors",
+      "Courtyard garden",
+      "Chef's kitchen",
+      "Fireplace"
+    ],
+    "image": "townhouse_charleston.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Family-Friendly Suburban Home",
+    "segment_name": "Residential",
+    "description": "Make lasting memories in this spacious suburban home perfect for families. Enjoy ample living space, a large backyard, and proximity to schools and parks.",
+    "price": "$500,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "Austin, Texas",
+    "facilities": [
+      "Multiple bedrooms",
+      "Backyard patio",
+      "Playroom",
+      "Attached garage"
+    ],
+    "image": "suburban_home_austin.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Luxurious Penthouse with Skyline Views",
+    "segment_name": "Residential",
+    "description": "Live lavishly in this stunning penthouse offering unparalleled views of the city skyline. With high-end finishes and exclusive amenities, this property epitomizes luxury living.",
+    "price": "$1,500,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Los Angeles, California",
+    "facilities": [
+      "Private rooftop terrace",
+      "Spa-like bathrooms",
+      "Concierge service",
+      "State-of-the-art kitchen"
+    ],
+    "image": "luxury_penthouse.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Cozy Cottage by the Lake",
+    "segment_name": "Residential",
+    "description": "Escape the hustle and bustle in this charming cottage nestled beside a tranquil lake. Perfect for nature lovers, this retreat offers peace and serenity.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "1200 sq ft",
+    "location": "Lake Tahoe, Nevada",
+    "facilities": [
+      "Lakefront deck",
+      "Stone fireplace",
+      "Boat dock",
+      "Scenic views"
+    ],
+    "image": "lake_cottage.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Contemporary Loft in Artsy Neighborhood",
+    "segment_name": "Residential",
+    "description": "Immerse yourself in creativity and culture in this contemporary loft located in a vibrant arts district. With its industrial-chic design and eclectic vibe, this property is perfect for urban dwellers with an artistic flair.",
+    "price": "$900,000",
+    "status": "sale",
+    "area": "2000 sq ft",
+    "location": "Portland, Oregon",
+    "facilities": [
+      "Exposed brick walls",
+      "Art studio space",
+      "Community rooftop garden",
+      "Walk-in closet"
+    ],
+    "image": "artsy_loft.jpg"
+  }
+]
