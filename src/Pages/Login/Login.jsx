@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
+  const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
 
   const {
     register,
@@ -10,7 +14,35 @@ const Login = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => {
+    const {email, password } = data;
+    logIn(email, password)
+    .then(result=>{
+      console.log(result.user);
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+  }
+  const handleGoogleLogin =() =>{
+   googleLogin()
+   .then(result =>{
+    console.log(result.user);
+   })
+   .catch(error=>{
+    console.error(error)
+   })
+  }
+  const handleGithubLogin =() =>{
+    githubLogin()
+   .then(result =>{
+    console.log(result.user);
+   })
+   .catch(error=>{
+    console.error(error)
+   })
+  }
+
   return (
     <div className="min-h-[calc(100vh-250px)]">
       <div className="hero min-h-screen bg-base-200 px-10">
@@ -61,6 +93,10 @@ const Login = () => {
               </div>
               <p>Are You new ? <Link className="link-primary hover:link" to='/register'>Register</Link></p>
             </form>
+            <div className="flex justify-around">
+              <button onClick={handleGoogleLogin} className="btn bg-gray-600 items-center"><FaGoogle className="text-yellow-400"></FaGoogle> google</button>
+              <button onClick={handleGithubLogin} className="btn bg-gray-600 items-center"><FaGithub className="font-bold"></FaGithub> Github</button>
+            </div>
           </div>
         </div>
       </div>
