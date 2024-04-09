@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { BsEyeSlashFill } from "react-icons/bs";
@@ -9,6 +9,8 @@ const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -21,6 +23,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result);
+        navigate(location?.state ? location.state : '/')
       })
       .catch((error) => {
         console.error(error);

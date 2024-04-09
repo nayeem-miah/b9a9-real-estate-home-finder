@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-
+import { MdInsertEmoticon } from "react-icons/md";
 const Navbar = () => {
   const { LogOut, user } = useContext(AuthContext);
 
@@ -85,9 +85,9 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && user.email}
         {user &&
-          (<span>
+          (<span> 
             <a>
-              <img className="rounded-full w-9 ml-4" src={user.photoURL} />
+              <img className="rounded-full w-9 ml-4" src={user.photoURL ? user.photoURL :<MdInsertEmoticon></MdInsertEmoticon> } />
             </a>
           </span>)}
         {user ? (

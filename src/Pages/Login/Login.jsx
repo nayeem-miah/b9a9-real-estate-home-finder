@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
+  const location = useLocation();
+  const navigate = useNavigate()
 
   const {
     register,
@@ -19,6 +21,9 @@ const Login = () => {
     logIn(email, password)
     .then(result=>{
       console.log(result.user);
+
+      //  navigate login
+      navigate(location?.state ? location.state : '/')
     })
     .catch(error =>{
       console.error(error)
@@ -28,6 +33,7 @@ const Login = () => {
    googleLogin()
    .then(result =>{
     console.log(result.user);
+    navigate(location?.state ? location.state : '/')
    })
    .catch(error=>{
     console.error(error)
@@ -37,6 +43,7 @@ const Login = () => {
     githubLogin()
    .then(result =>{
     console.log(result.user);
+    navigate(location?.state ? location.state : '/')
    })
    .catch(error=>{
     console.error(error)

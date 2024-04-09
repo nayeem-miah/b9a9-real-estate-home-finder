@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         loader: () => fetch("/category.json"),
       },
       {
-        path:'/details',
+        path: "/details",
         element: (
           <PrivetRoute>
             <ViewDetails></ViewDetails>
