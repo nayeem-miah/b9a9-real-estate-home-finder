@@ -8,6 +8,7 @@ import { IoEye } from "react-icons/io5";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
 
   const {
     register,
@@ -24,6 +25,13 @@ const Register = () => {
       .catch((error) => {
         console.error(error);
       });
+      if(password.length <6){
+        setError("password must be 6 characters ");
+      }
+    //  else if((!/(?=.*[A-Z])/.test(password))) {
+    //     setError(true)
+    //   }
+
   };
 
 

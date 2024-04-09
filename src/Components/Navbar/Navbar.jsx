@@ -1,14 +1,13 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import auth from "../../Firebase/Firebase.config";
 
 const Navbar = () => {
   const { LogOut, user } = useContext(AuthContext);
 
   console.log(user);
   const handleLogout = () => {
-    LogOut(auth)
+    LogOut()
       .then((result) => {
         console.log(result.user);
       })
@@ -85,25 +84,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user && user.email}
-        {user ? (
-          <span>
+        {user &&
+          (<span>
             <a>
               <img className="rounded-full w-9 ml-4" src={user.photoURL} />
             </a>
-          </span>
-        ) : (
-          <NavLink to={"/login"} className="btn">
-            User Profile
-          </NavLink>
-        )}
+          </span>)}
         {user ? (
-          <NavLink>
+          <Link>
             <button onClick={handleLogout} className="btn ml-4">
               Sign Out
-            </button>{" "}
-          </NavLink>
+            </button>
+          </Link>
         ) : (
-          ""
+          <Link to={"/login"} className="btn">
+            User Profile
+          </Link>
         )}
       </div>
     </div>

@@ -31,7 +31,7 @@ const Login = () => {
    })
    .catch(error=>{
     console.error(error)
-   })
+   }) 
   }
   const handleGithubLogin =() =>{
     githubLogin()
