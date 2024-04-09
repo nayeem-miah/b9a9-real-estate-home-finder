@@ -5,7 +5,7 @@ import { MdInsertEmoticon } from "react-icons/md";
 const Navbar = () => {
   const { LogOut, user } = useContext(AuthContext);
 
-  console.log(user);
+  // console.log(user);
   const handleLogout = () => {
     LogOut()
       .then((result) => {
