@@ -4,7 +4,7 @@ import Cards from "../../Components/Cards/Cards";
 
 const Home = () => {
   const categories = useLoaderData();
-  // console.log(categories);
+
   return (
     <div className="min-h-[calc(100vh-250px)] lg:px-10 px-1 ">
       <Header></Header>

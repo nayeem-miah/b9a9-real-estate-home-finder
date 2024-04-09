@@ -1,10 +1,15 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { FaLocationDot } from "react-icons/fa6";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Cards = ({ category }) => {
+  const {user} = useContext(AuthContext)
   const {
     segment_name,
     price,
+    id,
     location,
     image,
     estate_title,
@@ -12,7 +17,7 @@ const Cards = ({ category }) => {
     facilities,
   } = category;
   return (
-    <div className="card card-compact hover:scale-105  bg-base-100 shadow-xl">
+    <div className="card card-compact hover:scale-105  bg-gray-800 shadow-xl">
       <figure>
         <img src={image} />
       </figure>
@@ -29,9 +34,14 @@ const Cards = ({ category }) => {
                 facilities.map((f,i)=><p className="border rounded" key={i}>{f}</p>)
             }
         </div>
-        <div className="card-actions my-4">
-          <button className="btn btn-primary">View Details </button>
-        </div>
+       {
+        user ?  <div className="card-actions my-4">
+        <Link to={`/details/${id}`} className="btn btn-primary">View Details </Link> 
+      </div>:
+       <div className="card-actions my-4">
+       <Link to={'/login'} className="btn btn-primary">View Details </Link>
+     </div>
+       }
       </div>
     </div>
   );

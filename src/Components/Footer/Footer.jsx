@@ -2,15 +2,9 @@ const Footer = () => {
   return (
     <footer className=" p-8 bg-neutral text-neutral-content">
       <div className="footer">
-        <aside>
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
-          </p>
-        </aside>
-        <nav>
-          <h6 className="footer-title">Social</h6>
+ 
+        <nav className="mx-auto">
+          <h6 className="footer-title">Our House </h6>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg

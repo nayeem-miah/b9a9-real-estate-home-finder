@@ -26,6 +26,7 @@ const Register = () => {
       });
   };
 
+
   return (
     <div className="min-h-[calc(100vh-250px)]">
       <div className="hero min-h-screen bg-base-200 px-10">

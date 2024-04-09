@@ -93,9 +93,9 @@ const Login = () => {
               </div>
               <p>Are You new ? <Link className="link-primary hover:link" to='/register'>Register</Link></p>
             </form>
-            <div className="flex gap-4">
-              <button onClick={handleGoogleLogin} className="btn bg-gray-600 items-center"><FaGoogle className="text-yellow-400"></FaGoogle> google</button>
-              <button onClick={handleGithubLogin} className="btn bg-gray-600 items-center"><FaGithub className="font-bold"></FaGithub> Github</button>
+            <div className="flex gap-4 p-1">
+              <button onClick={handleGoogleLogin} className="btn btn-secondary  items-center"><FaGoogle className=""></FaGoogle> google</button>
+              <button onClick={handleGithubLogin} className="btn btn-secondary  items-center"><FaGithub className="font-bold"></FaGithub> Github</button>
             </div>
           </div>
         </div>

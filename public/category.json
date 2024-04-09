@@ -33,7 +33,7 @@
     "area": "2000 sq ft",
     "location": "Chicago, Illinois",
     "facilities": ["Sky lounge", "Fitness center"],
-    "image": "luxury_apartment.jpg"
+    "image": "https://i.ibb.co/F30f0cK/istockphoto-1318834610-1024x1024.jpg"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "area": "500 sq ft (per room)",
     "location": "Austin, Texas",
     "facilities": ["Fully furnished units", "Study lounges"],
-    "image": "student_housing.jpg"
+    "image": "https://i.ibb.co/RpQ80rH/istockphoto-1166870171-1024x1024.jpg"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "area": "700 sq ft (per unit)",
     "location": "Scottsdale, Arizona",
     "facilities": ["Assisted living services", "Restaurant-style dining"],
-    "image": ""
+    "image": "https://i.ibb.co/9WXStWq/istockphoto-1400090823-1024x1024.jpg"
   },
   {
     "id": 6,
