@@ -57,7 +57,7 @@ const Login = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold animate__animated animate__fadeInLeft  text-blue-800">Login now!</h1>
             <p className="py-6">
-
+            please logIn Now ....
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.

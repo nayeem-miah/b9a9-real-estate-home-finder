@@ -30,10 +30,12 @@ const Register = () => {
       });
       if(password.length <6){
         setError("password must be 6 characters ");
+        return;
       }
-    //  else if((!/(?=.*[A-Z])/.test(password))) {
-    //     setError(true)
-    //   }
+     else if (!/[A-Z]/.test(password)) {
+        setError(' Must have an Uppercase letter in the password');
+        return;
+      }
 
   };
 

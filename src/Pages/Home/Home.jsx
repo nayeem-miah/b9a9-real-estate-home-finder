@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import Cards from "../../Components/Cards/Cards";
+import ClientReview from "../../Components/ClientReview";
 
 const Home = () => {
   const categories = useLoaderData();
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <div className="min-h-[calc(100vh-250px)] lg:px-10 px-1 ">
       <Header></Header>
+      {/* category  */}
       <div className="my-10">
         {" "}
         <h2 className="text-center font-extrabold text-4xl my-4 ">
@@ -28,6 +30,12 @@ const Home = () => {
           <Cards key={category.id} category={category}></Cards>
         ))}
       </div>
+      {/*  client review  */}
+      {/* {
+        data.map(da =><ClientReview key={da.id} da={da}></ClientReview>)
+      }
+      */}
+      <ClientReview></ClientReview>
     </div>
   );
 };
