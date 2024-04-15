@@ -4,7 +4,7 @@ import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { BsEyeSlashFill } from "react-icons/bs";
 import { IoEye } from "react-icons/io5";
-// import toast, { Toaster } from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -41,7 +41,13 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result);
-        alert("User Created successfully");
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "User created successfully",
+          showConfirmButton: false,
+          timer: 2000
+        });
         setSuccess("User created successfully");
         navigate(location?.state ? location.state : "/");
       })

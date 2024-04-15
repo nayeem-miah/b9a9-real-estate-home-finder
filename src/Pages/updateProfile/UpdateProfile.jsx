@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
+
 import { useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 const UpdateProfile = () => {
@@ -17,6 +19,13 @@ const UpdateProfile = () => {
   const onSubmit = (data) => {
     const { image, name } = data;
     updateUserProfile(name, image).then(() => {
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "profile  successful",
+        showConfirmButton: false,
+        timer: 2000,
+      });
       navigate(location?.state ? location.state : "/");
     });
   };
