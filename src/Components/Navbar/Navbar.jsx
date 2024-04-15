@@ -28,16 +28,14 @@ const Navbar = () => {
           <NavLink to="/register">Register</NavLink>
         </li>
       )}
-      <li>
-        <NavLink to="/profile"> Update Profile</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to="/profile"> Update Profile</NavLink>
+        </li>
+      )}
 
       {user && (
         <span className="flex">
-          {" "}
-          {/* <li>
-            <NavLink to="/details">View Details </NavLink>
-          </li> */}
           <li>
             <NavLink to="/contact">Contact Us</NavLink>
           </li>
@@ -82,14 +80,26 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks} </ul>
       </div>
-      <div className="navbar-end">
-        {user && user.email}
-        {user &&
-          (<span> 
+      <div className="navbar-end gap-2">
+        <span>{user && user.email}</span>
+        {user && user.displayName}
+        
+        {user && (
+          <span>
             <a>
-              <img className="rounded-full w-9 ml-4" src={user.photoURL ? user.photoURL :<MdInsertEmoticon></MdInsertEmoticon> } />
+              <img
+                className="rounded-full w-9 ml-4"
+                src={
+                  user.photoURL ? (
+                    user.photoURL
+                  ) : (
+                    <MdInsertEmoticon></MdInsertEmoticon>
+                  )
+                }
+              />
             </a>
-          </span>)}
+          </span>
+        )}
         {user ? (
           <Link>
             <button onClick={handleLogout} className="btn ml-4">

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
   const {logIn, googleLogin, githubLogin} = useContext(AuthContext)
@@ -19,14 +20,15 @@ const Login = () => {
   const onSubmit = (data) => {
     const {email, password } = data;
     logIn(email, password)
-    .then(result=>{
-      console.log(result.user);
+    .then(()=>{
+      toast.success('LogIn successful')
+      
 
       //  navigate login
       navigate(location?.state ? location.state : '/')
     })
-    .catch(error =>{
-      console.error(error)
+    .catch( ()=>{
+      toast.error('wrong password or email address')
     })
   }
   const handleGoogleLogin =() =>{
@@ -107,6 +109,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

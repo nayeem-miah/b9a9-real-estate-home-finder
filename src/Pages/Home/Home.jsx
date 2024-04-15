@@ -8,6 +8,7 @@ const Home = () => {
 
   return (
     <div className="min-h-[calc(100vh-250px)] lg:px-10 px-1 ">
+        
       <Header></Header>
       {/* category  */}
       <div className="my-10">

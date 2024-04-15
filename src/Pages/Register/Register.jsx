@@ -8,7 +8,9 @@ import { IoEye } from "react-icons/io5";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -20,25 +22,32 @@ const Register = () => {
 
   const onSubmit = (data) => {
     const { email, password } = data;
+    setError('');
+    setSuccess('');
+
+    if (password.length < 6) {
+      setError("password must be 6 characters");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setError("Must have an Uppercase letter in the password");
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setError("Must have an lowerCase letter in the password");
+      return;
+    }
     createUser(email, password)
       .then((result) => {
         console.log(result);
-        navigate(location?.state ? location.state : '/')
+        setSuccess("User created successfully");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
+        setError(error.massage);
       });
-      if(password.length <6){
-        setError("password must be 6 characters ");
-        return;
-      }
-     else if (!/[A-Z]/.test(password)) {
-        setError(' Must have an Uppercase letter in the password');
-        return;
-      }
-
   };
-
 
   return (
     <div className="min-h-[calc(100vh-250px)]">
@@ -49,9 +58,8 @@ const Register = () => {
               Register now!
             </h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Register Now ! Are you new user ? If you new user then please
+              register .
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -129,6 +137,9 @@ const Register = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
+                {/* error */}
+                {error && <p className="text-red-600">{error}</p>}
+                {success && <p className="text-green-600">{success}</p>}
               </div>
               <p>
                 Already Register ?{" "}

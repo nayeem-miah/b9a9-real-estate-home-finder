@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'; 
 const Client = ({ dt }) => {
-  console.log(dt);
+  
   const { name, img, details, additional_details } = dt;
   return (
     <div className="card card-compact  bg-base-100 shadow-xl">
