@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import Swal from "sweetalert2";
+import PageTittle from "../../Components/PageTittle";
 
 const Login = () => {
   const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
@@ -50,6 +51,13 @@ const Login = () => {
     googleLogin()
       .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "LogIn successful",
+          showConfirmButton: false,
+          timer: 2000,
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -60,6 +68,13 @@ const Login = () => {
     githubLogin()
       .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "LogIn successful",
+          showConfirmButton: false,
+          timer: 2000,
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -69,6 +84,7 @@ const Login = () => {
 
   return (
     <div className="min-h-[calc(100vh-250px)]">
+      <PageTittle title={"login Page"}></PageTittle>
       <div className="hero min-h-screen bg-base-200 px-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

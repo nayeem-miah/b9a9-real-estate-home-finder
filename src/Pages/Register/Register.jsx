@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { BsEyeSlashFill } from "react-icons/bs";
 import { IoEye } from "react-icons/io5";
 import Swal from "sweetalert2";
+import PageTittle from "../../Components/PageTittle";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -59,6 +60,7 @@ const Register = () => {
 
   return (
     <div className="min-h-[calc(100vh-250px)]">
+      <PageTittle title={"Register page"}></PageTittle>
       <div className="hero min-h-screen bg-base-200 px-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

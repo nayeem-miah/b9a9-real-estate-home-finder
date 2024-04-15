@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 
 import { useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import PageTittle from "../../Components/PageTittle";
 const UpdateProfile = () => {
   const { updateUserProfile } = useContext(AuthContext);
   const location = useLocation();
@@ -22,7 +23,7 @@ const UpdateProfile = () => {
       Swal.fire({
         position: "top-center",
         icon: "success",
-        title: "profile  successful",
+        title: "profile update successful",
         showConfirmButton: false,
         timer: 2000,
       });
@@ -31,6 +32,7 @@ const UpdateProfile = () => {
   };
   return (
     <div className="min-h-[calc(100vh-250px)] ">
+      <PageTittle title="Update profile"></PageTittle>
       <div className="hero min-h-screen bg-base-200 px-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

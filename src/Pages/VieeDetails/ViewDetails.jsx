@@ -1,11 +1,13 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { useLoaderData, useParams } from "react-router-dom";
+import PageTittle from "../../Components/PageTittle";
 
 const ViewDetails = () => {
   const items = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
-  const item = items.find((job) => job.id === idInt);
+  const item = items.find((data) => data.id === idInt);
+  console.log(item);
   const {
     price,
     segment_name,
@@ -19,6 +21,7 @@ const ViewDetails = () => {
   } = item;
   return (
     <div className="flex  p-2 lg:p-10 shadow-lg">
+      <PageTittle title="View details"></PageTittle>
       <div>
         <img src={image} className="" />
       </div>

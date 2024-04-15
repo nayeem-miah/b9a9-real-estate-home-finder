@@ -1,9 +1,11 @@
 import { MdOutlineEmail } from "react-icons/md";
 import { IoMdContact } from "react-icons/io";
 import { Link } from "react-router-dom";
+import PageTittle from "../../Components/PageTittle";
 const ContactUs = () => {
   return (
     <div className="min-h-[calc(100vh-250px)]">
+      <PageTittle title="Contact page"></PageTittle>
       <div>
         <h2 className="text-center text-5xl underline text-gray-500 hover:text-gray-700">
           contact

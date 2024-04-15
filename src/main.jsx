@@ -14,6 +14,7 @@ import UpdateProfile from "./Pages/updateProfile/UpdateProfile";
 import PrivetRoute from "./Pages/PrivetRoute/PrivetRoute";
 import ViewDetails from "./Pages/VieeDetails/ViewDetails";
 
+
 const router = createBrowserRouter([
   {
     path: "/",

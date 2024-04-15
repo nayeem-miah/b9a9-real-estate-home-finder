@@ -3,12 +3,14 @@ import Header from "../../Components/Header/Header";
 import Cards from "../../Components/Cards/Cards";
 import ClientReview from "../../Components/ClientReview";
 
+import PageTittle from "../../Components/PageTittle";
+
 const Home = () => {
   const categories = useLoaderData();
 
   return (
     <div className="min-h-[calc(100vh-250px)] lg:px-10 px-1 ">
-        
+        <PageTittle title="Home page"></PageTittle>
       <Header></Header>
       {/* category  */}
       <div className="my-10">
