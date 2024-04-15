@@ -4,6 +4,7 @@ import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { BsEyeSlashFill } from "react-icons/bs";
 import { IoEye } from "react-icons/io5";
+// import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -13,7 +14,7 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
-
+ 
   const {
     register,
     handleSubmit,
@@ -22,8 +23,8 @@ const Register = () => {
 
   const onSubmit = (data) => {
     const { email, password } = data;
-    setError('');
-    setSuccess('');
+    setError("");
+    setSuccess("");
 
     if (password.length < 6) {
       setError("password must be 6 characters");
@@ -40,6 +41,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result);
+        alert("User Created successfully");
         setSuccess("User created successfully");
         navigate(location?.state ? location.state : "/");
       })
@@ -136,7 +138,9 @@ const Register = () => {
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Register</button>
+                <button  className="btn btn-primary">Register</button>
+                
+                {/* <Toaster /> */}
                 {/* error */}
                 {error && <p className="text-red-600">{error}</p>}
                 {success && <p className="text-green-600">{success}</p>}
