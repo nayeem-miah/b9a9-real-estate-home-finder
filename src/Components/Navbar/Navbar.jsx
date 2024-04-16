@@ -73,7 +73,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">
           Our{" "}
           <span className="text-blue-600 animate__animated animate__bounce">
-            Residential
+            Homefinder
           </span>
         </a>
       </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
       <div className="navbar-end gap-2">
         <span>{user && user.email}</span>
         {user && user.displayName}
-        
+
         {user && (
           <span>
             <a>

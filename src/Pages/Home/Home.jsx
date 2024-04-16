@@ -28,7 +28,7 @@ const Home = () => {
           </small>
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 my-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 my-4 animate__animated animate__slideInUp">
         {categories.map((category) => (
           <Cards key={category.id} category={category}></Cards>
         ))}
