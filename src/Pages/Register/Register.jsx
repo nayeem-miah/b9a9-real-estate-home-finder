@@ -36,7 +36,7 @@ const Register = () => {
       return;
     }
     if (!/[a-z]/.test(password)) {
-      setError("Must have an lowerCase letter in the password");
+      setError("Must have a lowerCase letter in the password");
       return;
     }
     createUser(email, password)
@@ -148,7 +148,7 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button  className="btn btn-primary">Register</button>
                 
-                {/* <Toaster /> */}
+               
                 {/* error */}
                 {error && <p className="text-red-600">{error}</p>}
                 {success && <p className="text-green-600">{success}</p>}

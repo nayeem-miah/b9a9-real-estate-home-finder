@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <div className="min-h-[calc(100vh-250px)] lg:px-10 px-1 ">
-        <PageTittle title="Home page"></PageTittle>
+      <PageTittle title="Home page"></PageTittle>
       <Header></Header>
       {/* category  */}
       <div className="my-10">
@@ -34,10 +34,7 @@ const Home = () => {
         ))}
       </div>
       {/*  client review  */}
-      {/* {
-        data.map(da =><ClientReview key={da.id} da={da}></ClientReview>)
-      }
-      */}
+
       <ClientReview></ClientReview>
     </div>
   );

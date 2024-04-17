@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { MdInsertEmoticon } from "react-icons/md";
+import Swal from "sweetalert2";
 const Navbar = () => {
   const { LogOut, user } = useContext(AuthContext);
 
@@ -9,7 +10,15 @@ const Navbar = () => {
   const handleLogout = () => {
     LogOut()
       .then((result) => {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "logOut successful",
+          showConfirmButton: false,
+          timer: 2000,
+        });
         console.log(result.user);
+
       })
       .catch((error) => {
         console.error(error);
