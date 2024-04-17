@@ -1,9 +1,15 @@
 import PropTypes from 'prop-types'; 
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 const Client = ({ dt }) => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   
   const { name, img, details, additional_details } = dt;
   return (
-    <div className="card card-compact hover:bg-base-200 pt-8  bg-base-100 shadow-xl">
+    <div className="card card-compact hover:bg-base-200 pt-8  bg-base-100 shadow-xl" data-aos="fade-up-right" >
       <figure>
         <img className="w-10 rounded-lg" src={img} />
       </figure>

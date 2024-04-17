@@ -3,9 +3,15 @@ import { useContext } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Cards = ({ category }) => {
-  const {user} = useContext(AuthContext)
+  const {user} = useContext(AuthContext);
+  useEffect(()=>{
+    Aos.init();
+  },[])
   const {
     segment_name,
     price,
@@ -17,7 +23,7 @@ const Cards = ({ category }) => {
     facilities,
   } = category;
   return (
-    <div className="card card-compact hover:scale-105  bg-gray-800 shadow-xl">
+    <div className="card card-compact bg-gray-800 shadow-xl" data-aos="fade-right">
       <figure>
         <img src={image} />
       </figure>

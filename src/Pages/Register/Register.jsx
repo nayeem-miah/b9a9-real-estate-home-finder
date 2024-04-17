@@ -15,7 +15,7 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
- 
+
   const {
     register,
     handleSubmit,
@@ -47,7 +47,7 @@ const Register = () => {
           icon: "success",
           title: "User created successfully",
           showConfirmButton: false,
-          timer: 2000
+          timer: 2000,
         });
         setSuccess("User created successfully");
         navigate(location?.state ? location.state : "/");
@@ -146,9 +146,8 @@ const Register = () => {
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button  className="btn btn-primary">Register</button>
-                
-               
+                <button className="btn btn-primary">Register</button>
+
                 {/* error */}
                 {error && <p className="text-red-600">{error}</p>}
                 {success && <p className="text-green-600">{success}</p>}
