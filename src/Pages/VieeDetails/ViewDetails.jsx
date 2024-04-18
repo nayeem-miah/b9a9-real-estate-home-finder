@@ -21,7 +21,7 @@ const ViewDetails = () => {
   } = item;
   return (
     <div className="flex  p-2 lg:p-10 shadow-lg">
-      <PageTittle title="View details"></PageTittle>
+      <PageTittle title="View details | Real-estate HomefindeR"></PageTittle>
       <div>
         <img src={image} className="" />
       </div>

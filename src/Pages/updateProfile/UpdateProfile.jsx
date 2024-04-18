@@ -17,7 +17,7 @@ const UpdateProfile = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const  onSubmit = (data) => {
     const { image, name } = data;
     updateUserProfile(name, image).then(() => {
       Swal.fire({
@@ -32,7 +32,7 @@ const UpdateProfile = () => {
   };
   return (
     <div className="min-h-[calc(100vh-250px)] ">
-      <PageTittle title="Update profile"></PageTittle>
+      <PageTittle title="Update profile | Real-estate HomefindeR"></PageTittle>
       <div className="hero min-h-screen bg-base-200 px-10">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

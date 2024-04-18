@@ -18,7 +18,6 @@ const Navbar = () => {
           timer: 2000,
         });
         console.log(result.user);
-
       })
       .catch((error) => {
         console.error(error);
@@ -79,7 +78,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
+        <a className="btn btn-ghost lg:text-2xl text-xs">
           Our{" "}
           <span className="text-blue-600 animate__animated animate__bounce">
             Homefinder
