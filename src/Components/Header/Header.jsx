@@ -62,7 +62,7 @@ const Header = () => {
       loop={true}
     >
       <SwiperSlide>
-        <div className="w-full my-10"><img className="w-full h-auto" src={img2}/></div> 
+        <div className="w-full my-10"><img className="w-full h-auto" src={img2}/></div>   
       </SwiperSlide>
       <SwiperSlide>
         <div className="w-full my-10"><img className="w-full h-auto" src={image}/></div> 
